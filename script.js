@@ -1,10 +1,10 @@
-// Replace with your actual key from weatherapi.com
+// API KEY
 const API_KEY = '968ca585ef62473d83643409262506'; 
 const btn = document.getElementById('getWeatherBtn');
 const citySelect = document.getElementById('citySelect');
 const resultDiv = document.getElementById('weatherResult');
 
-// DOM elements to update
+// DOM elements
 const cityName = document.getElementById('cityName');
 const temp = document.getElementById('temperature');
 const condition = document.getElementById('condition');
@@ -22,14 +22,14 @@ async function getWeather() {
     
     const data = await response.json();
     
-    // DOM Manipulation - this is what gets you marks
+    // DOM Manipulation 
     cityName.textContent = data.location.name;
     temp.textContent = `Temperature: ${data.current.temp_c}°C`;
     condition.textContent = `Condition: ${data.current.condition.text}`;
     icon.src = `https:${data.current.condition.icon}`;
     icon.alt = data.current.condition.text;
     
-    resultDiv.classList.remove('hidden'); // show results
+    resultDiv.classList.remove('hidden');
     
   } catch (error) {
     alert('Error: ' + error.message);
