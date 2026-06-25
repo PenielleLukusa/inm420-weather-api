@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather API - INM420</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Current Weather Checker</h1>
+  
+  <label for="citySelect">Choose a city:</label>
+  <select id="citySelect">
+    <option value="Toronto">Toronto</option>
+    <option value="New York">New York</option>
+    <option value="London">London</option>
+    <option value="Tokyo">Tokyo</option>
+  </select>
+  <button id="getWeatherBtn">Get Weather</button>
+
+  <div id="weatherResult" class="hidden">
+    <h2 id="cityName"></h2>
+    <img id="weatherIcon" src="" alt="Weather icon">
+    <p id="temperature"></p>
+    <p id="condition"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
